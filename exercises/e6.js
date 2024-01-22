@@ -4,9 +4,6 @@
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
 export function getClientWithNoMoney(array) {
-  // Your code goes here...
-   // Using filter to select accounts with a balance of 0
-  // Using map to extract the 'name' property from each matching account
   return array
     .filter(account => account.balance === 0)
     .map(account => account.name);

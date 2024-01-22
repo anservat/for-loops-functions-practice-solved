@@ -4,17 +4,10 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
-export function getClientWithLeastPositiveBalance(array) {
-  // Your code goes here...
-  // Using filter to select accounts with a positive balance
-  const positiveBalances = array.filter(account => account.balance > 0);
+  export function getClientWithLeastPositiveBalance(array) {
+  var leastBalances = [];
 
-  // Sorting the filtered accounts based on balance in ascending order
-  positiveBalances.sort((a, b) => a.balance - b.balance);
-
-  // Returning the account with the least positive balance (first element after sorting)
-  return positiveBalances.slice(0, 1);  
-}
+} 
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-7"

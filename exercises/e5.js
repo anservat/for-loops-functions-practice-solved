@@ -5,8 +5,6 @@
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
 export function getAllClientNames(array) {
-  // Your code goes here...
-   // Using map to extract the 'name' property from each object in the array
    return array.map(account => account.name);
 }
 
