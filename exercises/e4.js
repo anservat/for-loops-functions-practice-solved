@@ -5,10 +5,14 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
+  // Using the spread operator (...) to pass the array elements as arguments to Math.min
+  return Math.min(...array);
 }
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
+  // Using the spread operator (...) to pass the array elements as arguments to Math.max
+  return Math.max(...array);  
 }
 
 // === TEST YOURSELF ===

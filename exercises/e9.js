@@ -6,7 +6,8 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
-
+  // Using filter to select accounts with a balance over $100
+  return array.filter(account => account.balance > 100);
 }
 
 

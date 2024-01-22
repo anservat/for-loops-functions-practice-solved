@@ -7,7 +7,8 @@
 
 export function doesArrayInclude(array, value) {
   // Your code goes here...
-
+  // Using the some method to check if any element equals the specified value
+  return array.some(element => element === value);
 }
 
 

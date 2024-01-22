@@ -7,7 +7,20 @@
 
 export function getClientsWithWrongBalance(array) {
   // Your code goes here...
+  // Using filter to select accounts with wrong balances
+  return array.filter(account => {
+    // Using reduce to calculate the sum of deposits
+    const depositsSum = (account.deposits || []).reduce((sum, deposit) => sum + deposit, 0);
 
+    // Using reduce to calculate the sum of withdrawals
+    const withdrawalsSum = (account.withdrawals || []).reduce((sum, withdrawal) => sum + withdrawal, 0);
+
+    // Calculating the expected balance
+    const expectedBalance = depositsSum - withdrawalsSum;
+
+    // Checking if the balance is different from the expected balance
+    return account.balance !== expectedBalance;
+  });
 }
 
 

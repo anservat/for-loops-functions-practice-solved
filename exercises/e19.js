@@ -6,7 +6,11 @@
 
 export function reverseArray(array) {
   // Your code goes here...
-
+  // Using reduce to build the reversed array
+  return array.reduce((reversedArray, element) => {
+    // Insert the current element at the beginning of the array
+    return [element, ...reversedArray];
+  }, []);
 }
 
 

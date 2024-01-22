@@ -10,7 +10,12 @@
 
 export function getAverage(array) {
   // Your code goes here...
+  if (array.length === 0) {
+    return 0; // To handle the case when the array is empty
+  }
 
+  const sum = array.reduce((acc, num) => acc + num, 0);
+  return sum / array.length;
 }
 
 
@@ -23,7 +28,23 @@ export function getAverage(array) {
 
 export function getStringSum(str) {
   // Your code goes here...
-
+  function getStringSum(str) {
+    // Use a regular expression to match all integers in the string
+    const numbers = str.match(/-?\d+/g);
+  
+    if (!numbers) {
+      return 0; // Return 0 if there are no integers in the string
+    }
+  
+    // Sum up the extracted integers
+    const sum = numbers.reduce((acc, numStr) => acc + parseInt(numStr, 10), 0);
+  
+    return sum;
+  }
+  
+  // Example1 usage:
+  const result = getStringSum("GH2U87A");
+  console.log(result); // Output: 89
 }
 
 

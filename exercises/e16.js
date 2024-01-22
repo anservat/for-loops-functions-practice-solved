@@ -7,7 +7,16 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+  // Using recursion to flatten nested arrays
+  return array.reduce((acc, item) => {
+    if (Array.isArray(item)) {
+      // If the item is an array, recursively call flatArrays
+      return [...acc, ...flatArrays(item)];
+    } else {
+      // If the item is not an array, add it to the result array
+      return [...acc, item];
+    }
+  }, []);
 }
 
 

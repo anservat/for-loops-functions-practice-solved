@@ -5,7 +5,11 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-
+  // Using filter to select accounts with names containing the specified letter
+  // Using map to extract the 'name' property from each matching account
+  return array
+    .filter(account => account.name.toLowerCase().includes(letter.toLowerCase()))
+    .map(account => account.name);
 }
 
 // === TEST YOURSELF ===

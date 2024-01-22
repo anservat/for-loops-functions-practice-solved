@@ -6,7 +6,8 @@
 
 export function concatArrays(arr1, arr2) {
   // Your code goes here...
-
+  // Using the spread operator to create a new array with elements from both arrays
+  return [...arr1, ...arr2];
 }
 
 

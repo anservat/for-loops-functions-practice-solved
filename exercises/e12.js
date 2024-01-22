@@ -6,7 +6,8 @@
 
 export function getAllDepositsGreaterThanOneHundred(array) {
   // Your code goes here...
-
+  // Using flatMap to flatten the array and select deposits greater than 100
+  return array.flatMap(account => (account.deposits || []).filter(deposit => deposit > 100));
 }
 
 

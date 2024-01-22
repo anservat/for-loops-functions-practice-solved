@@ -6,7 +6,13 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
+  // Using reduce to find the account with the greatest balance
+  const greatestBalanceAccount = array.reduce((maxBalanceAccount, currentAccount) => {
+    return currentAccount.balance > maxBalanceAccount.balance ? currentAccount : maxBalanceAccount;
+  }, array[0]);
 
+  // Returning the result in an array
+  return [greatestBalanceAccount];
 }
 
 

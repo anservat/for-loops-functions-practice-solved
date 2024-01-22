@@ -6,7 +6,12 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  // Using map to calculate the sum of withdrawals for each account
+  return array.map(account => {
+    // Using reduce to sum up the withdrawals array (or returning 0 if no withdrawals)
+    const withdrawalSum = (account.withdrawals || []).reduce((sum, withdrawal) => sum + withdrawal, 0);
+    return withdrawalSum;
+  });
 }
 
 // === TEST YOURSELF ===
