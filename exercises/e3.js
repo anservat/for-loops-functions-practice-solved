@@ -9,14 +9,19 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
-  if (array.length === 0) {
-    return 0; // To handle the case when the array is empty
+  var average = 0;
+  
+  for (var i = 0; i < array.length; i++) {
+    var currentNum = array[i];
+    average += currentNum;
   }
-
-  const sum = array.reduce((acc, num) => acc + num, 0);
-  return sum / array.length;
+  
+  average = average / array.length;
+  return average;
 }
+
+var averageResult = getAverage([22, 45, 4, 65]);
+console.log(averageResult);
 
 
 /** 
@@ -27,25 +32,23 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
-  function getStringSum(str) {
-    // Use a regular expression to match all integers in the string
-    const numbers = str.match(/-?\d+/g);
-  
-    if (!numbers) {
-      return 0; // Return 0 if there are no integers in the string
+  var totalSum = 0;
+
+  for (var char of str) {
+    if (!isNaN(parseInt(char))) {
+      totalSum += parseInt(char);
     }
-  
-    // Sum up the extracted integers
-    const sum = numbers.reduce((acc, numStr) => acc + parseInt(numStr, 10), 0);
-  
-    return sum;
   }
-  
-  // Example1 usage:
-  const result = getStringSum("GH2U87A");
-  console.log(result); // Output: 89
+  return totalSum;
 }
+
+var result1 = getStringSum("GH2U87A");
+var result2 = getStringSum("GHIUJUHSG");
+
+console.log(result1); 
+console.log(result2); 
+
+
 
 
 // === TEST YOURSELF ===
