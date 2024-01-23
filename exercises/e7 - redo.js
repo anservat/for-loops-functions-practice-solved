@@ -6,7 +6,15 @@
 
   export function getClientWithLeastPositiveBalance(array) {
   var leastBalances = [];
+  var minBalance = [];
 
+  for (var i = 0; i < array.length; i++) {
+    var account = array[i];
+    if (account.balance > 0 && account.balance < minBalance) {
+      minBalance = account.balance;
+    }
+  }
+  return leastBalances;
 } 
 
 // === TEST YOURSELF ===
