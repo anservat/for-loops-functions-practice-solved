@@ -6,19 +6,10 @@
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithWrongBalance(array) {
-  // Your code goes here...
-  // Using filter to select accounts with wrong balances
   return array.filter(account => {
-    // Using reduce to calculate the sum of deposits
-    const depositsSum = (account.deposits || []).reduce((sum, deposit) => sum + deposit, 0);
-
-    // Using reduce to calculate the sum of withdrawals
-    const withdrawalsSum = (account.withdrawals || []).reduce((sum, withdrawal) => sum + withdrawal, 0);
-
-    // Calculating the expected balance
-    const expectedBalance = depositsSum - withdrawalsSum;
-
-    // Checking if the balance is different from the expected balance
+    var depositsSum = (account.deposits || []).reduce((sum, deposit) => sum + deposit, 0);
+    var withdrawalsSum = (account.withdrawals || []).reduce((sum, withdrawal) => sum + withdrawal, 0);
+    var expectedBalance = depositsSum - withdrawalsSum;
     return account.balance !== expectedBalance;
   });
 }
