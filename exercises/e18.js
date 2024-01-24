@@ -5,11 +5,11 @@
 // NOTE: You can NOT use the array.join(), array.toString(), and array.replace() methods in your code
 
 export function joinToString(array, separator) {
-  // Using reduce to concatenate elements with the separator
-  return array.reduce((result, element, index) => {
-    // Adding separator unless it's the first element
-    return index === 0 ? element : result + separator + element;
-  }, '');
+  var result = '';
+  for (var i = 0; i < array.length; i++) {
+    result += i === 0 ? array[i] : separator + array[i];
+  }
+  return result;
 }
 
 // === TEST YOURSELF ===

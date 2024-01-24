@@ -1,4 +1,3 @@
-
 // EXERCISE 16
 // Please, read the exercise-info/flat.md to get the initial data of what is the expected result of this exercise.
 // Array example: flatArraysData in /data/data.js
@@ -6,20 +5,14 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
-  // Using recursion to flatten nested arrays
   return array.reduce((acc, item) => {
     if (Array.isArray(item)) {
-      // If the item is an array, recursively call flatArrays
-      return [...acc, ...flatArrays(item)];
+        return [...acc, ...flatArrays(item)];
     } else {
-      // If the item is not an array, add it to the result array
-      return [...acc, item];
+        return [...acc, item];
     }
   }, []);
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"
