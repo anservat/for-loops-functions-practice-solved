@@ -6,12 +6,20 @@
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithWrongBalance(array) {
-  return array.filter(account => {
+  var clientsWithWrongBalance = [];
+
+  for (var i = 0; i < array.length; i++) {
+    var account = array[i];
     var depositsSum = (account.deposits || []).reduce((sum, deposit) => sum + deposit, 0);
     var withdrawalsSum = (account.withdrawals || []).reduce((sum, withdrawal) => sum + withdrawal, 0);
     var expectedBalance = depositsSum - withdrawalsSum;
-    return account.balance !== expectedBalance;
-  });
+
+    if (account.balance !== expectedBalance) {
+      clientsWithWrongBalance.push(account);
+    }
+  }
+
+  return clientsWithWrongBalance;
 }
 
 

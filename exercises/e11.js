@@ -5,10 +5,15 @@
 // getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
 
 export function getAllWithdrawals(array) {
-  return array.map(account => {
+  var withdrawalSums = [];
+
+  for (var i = 0; i < array.length; i++) {
+    var account = array[i];
     var withdrawalSum = (account.withdrawals || []).reduce((sum, withdrawal) => sum + withdrawal, 0);
-    return withdrawalSum;
-  });
+    withdrawalSums.push(withdrawalSum);
+  }
+
+  return withdrawalSums;
 }
 
 // === TEST YOURSELF ===

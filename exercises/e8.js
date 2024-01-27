@@ -10,8 +10,7 @@ export function getClientWithGreatestBalance(array) {
 }
 
 var greatestBalanceAccount = array[0];
-
-for (var i = 1; i < array.length; i++) {
+  for (var i = 1; i < array.length; i++) {
   if (array[i].balance > greatestBalanceAccount.balance) {
     greatestBalanceAccount = array[i];
   }

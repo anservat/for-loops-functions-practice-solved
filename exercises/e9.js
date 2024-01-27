@@ -5,7 +5,15 @@
 // getClientsWithBalanceOverOneHundred(array) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithBalanceOverOneHundred(array) {
-  return array.filter(account => account.balance > 100);
+  var clientsWithBalanceOverOneHundred = [];
+
+  for (var i = 0; i < array.length; i++) {
+    if (array[i].balance > 100) {
+      clientsWithBalanceOverOneHundred.push(array[i]);
+    }
+  }
+
+  return clientsWithBalanceOverOneHundred;
 }
 
 // === TEST YOURSELF ===

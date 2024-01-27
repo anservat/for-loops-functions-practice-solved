@@ -10,10 +10,18 @@
 // ]
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
-  return array.filter(account => {
+  var accountsWithSumsLess2000 = [];
+
+  for (var i = 0; i < array.length; i++) {
+    var account = array[i];
     var depositsSum = (account.deposits || []).reduce((sum, deposit) => sum + deposit, 0);
-    return depositsSum < 2000;
-  });
+
+    if (depositsSum < 2000) {
+      accountsWithSumsLess2000.push(account);
+    }
+  }
+
+  return accountsWithSumsLess2000;
 }
 
 // === TEST YOURSELF ===

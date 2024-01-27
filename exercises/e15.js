@@ -4,7 +4,17 @@
 // NOTE: You can NOT use the array.concat() method in your code
 
 export function concatArrays(arr1, arr2) {
-  return [...arr1, ...arr2];
+  var concatenatedArray = [];
+
+  for (var i = 0; i < arr1.length; i++) {
+    concatenatedArray.push(arr1[i]);
+  }
+
+  for (var j = 0; j < arr2.length; j++) {
+    concatenatedArray.push(arr2[j]);
+  }
+
+  return concatenatedArray;
 }
 
 // === TEST YOURSELF ===
