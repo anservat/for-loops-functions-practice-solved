@@ -8,12 +8,12 @@ export function getClientsWithLetterInName(array, letter) {
 
   for (var i = 0; i < array.length; i++) {
     var account = array[i];
-    if (account.name.includes(letter)) {
+    if (account.name.toLowerCase().includes(letter.toLowerCase())) {
       result.push(account.name);
     }
   }
 
-  return result();
+  return result;
 }
 
 // === TEST YOURSELF ===
