@@ -9,6 +9,8 @@
 // Phil's Account Object
 // ]
 
+REDUCE NOT ALLOWED 
+
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   var accountsWithSumsLess2000 = [];
 

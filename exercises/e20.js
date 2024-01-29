@@ -5,14 +5,14 @@
 // NOTE: You MUST use double/nested FOR loop to solve this exercise. The array.includes() method is NOT allowed.
 
 export function separateNamesWithAFromRest(array) {
-  var namesWithA = [];
-  var namesWithoutA = [];
+  let namesWithA = [];
+  let namesWithoutA = [];
 
-  for (var i = 0; i < array.length; i++) {
-    var name = array[i];
-    var hasA = false;
+  for (let i = 0; i < array.length; i++) {
+    let name = array[i];
+    let hasA = false;
 
-    for (var j = 0; j < name.length; j++) {
+    for (let j = 0; j < name.length; j++) {
       if (name[j] === 'a') {
         hasA = true;
         break;

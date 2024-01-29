@@ -23,6 +23,8 @@
 // flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]) => ['d', 'r', 'z', 'b', 'f', 'y']
 // NOTE: You can NOT use the array.flat() method in your code
 
+FLAT NOT ALLOWED 
+
 export function flatArrays(array) {
   return array.reduce((acc, item) => {
     if (Array.isArray(item)) {

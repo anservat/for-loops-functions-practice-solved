@@ -5,6 +5,8 @@
 // Array example: bankAccounts in /data/data.js
 // getClientsWithWrongBalance(bankAccounts) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
+REDUCE NOT ALLOWED 
+
 export function getClientsWithWrongBalance(array) {
   var clientsWithWrongBalance = [];
 

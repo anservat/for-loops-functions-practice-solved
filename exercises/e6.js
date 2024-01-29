@@ -3,6 +3,10 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithNoMoney(bankAccounts) => ['Kevin', 'Jon']
 
+
+
+FILTER NOT ALLOWED
+
 export function getClientWithNoMoney(array) {
   return array
 

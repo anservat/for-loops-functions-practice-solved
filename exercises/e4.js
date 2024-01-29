@@ -3,6 +3,10 @@
 // findMinValueInArray([2, 45, 32, 3, 0, 46, 12]) => 0
 // findMaxValueInArray([2, 45, 32, 3, 0, 46, 12]) => 46
 
+
+
+MIN MAX NOT ALLOWED
+
 export function findMinValueInArray(array) {
   return Math.min(
     ...array);

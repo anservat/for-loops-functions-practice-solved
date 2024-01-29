@@ -4,9 +4,9 @@
 // getFirstTenNumbers() => [1, 2, 3, ... , 10]
 
 export function getFirstTenNumbers() {
-  var result = [];
+  let result = [];
   
-  for (var i = 1; i <= 10; i++) {
+  for (let i = 1; i <= 10; i++) {
     result.push(i);
   }
   return result;

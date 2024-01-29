@@ -5,9 +5,9 @@
 // getClientsWithBalanceOverOneHundred(array) => [{ name: 'Name1', balance: 32, ... }, { name: 'Name2', balance: 3523, ... }]
 
 export function getClientsWithBalanceOverOneHundred(array) {
-  var clientsWithBalanceOverOneHundred = [];
+  let clientsWithBalanceOverOneHundred = [];
 
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i].balance > 100) {
       clientsWithBalanceOverOneHundred.push(array[i]);
     }

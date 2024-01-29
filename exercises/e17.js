@@ -4,8 +4,10 @@
 // doesArrayInclude(['a', 'b', 'c'], 'f') => false
 // NOTE: You can NOT use the array.includes() method in your code
 
+INCLUDES NOT ALLOWED 
+
 export function doesArrayInclude(array, value) {
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (array[i] === value) {
       return true;
     }

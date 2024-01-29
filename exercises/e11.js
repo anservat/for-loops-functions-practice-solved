@@ -4,6 +4,8 @@
 // Array example: bankAccounts in /data/data.js
 // getAllWithdrawals(bankAccounts) => [3432, 0, 43242.34, 0, 23432]
 
+REDUCE NOT ALLOWED 
+
 export function getAllWithdrawals(array) {
   var withdrawalSums = [];
 
