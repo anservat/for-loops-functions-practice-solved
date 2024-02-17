@@ -5,7 +5,6 @@
 // getClientWithLeastBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
 export function getClientWithLeastPositiveBalance(array) {
-
   
 JUST ARRAY TO COMPARISION 
 
